@@ -10,7 +10,6 @@ class Bmi {
 
   int calculateBMI() {
     _bmi = weight / pow(height / 100, 2);
-    print(_bmi);
     return _bmi.round();
   }
 
