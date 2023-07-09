@@ -8,9 +8,10 @@ class Bmi {
 
   double _bmi = 0;
 
-  double calculateBMI() {
+  int calculateBMI() {
     _bmi = weight / pow(height / 100, 2);
-    return _bmi;
+    print(_bmi);
+    return _bmi.round();
   }
 
   String getResult() {

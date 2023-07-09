@@ -9,7 +9,7 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double get_bmi_result() {
+    int get_bmi_result() {
       return current_bmi.calculateBMI();
     }
 
@@ -21,7 +21,7 @@ class ResultsPage extends StatelessWidget {
       return current_bmi.getResult();
     }
 
-    double bmiResult = get_bmi_result();
+    int bmiResult = get_bmi_result();
     String? resultText = get_bmi_pointer();
     String? desc = get_bmi_description();
 

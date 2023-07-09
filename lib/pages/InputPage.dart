@@ -161,8 +161,10 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             FloatingActionButton(
                               onPressed: () {
+                                print(weight);
+
                                 setState(() {
-                                  weight < 200 ? weight + 1 : 200;
+                                  weight < 200 ? weight++ : 200;
                                 });
                               },
                               child: Text(
@@ -177,7 +179,7 @@ class _InputPageState extends State<InputPage> {
                             FloatingActionButton(
                               onPressed: () {
                                 setState(() {
-                                  weight >= 1 ? weight - 1 : 0;
+                                  weight >= 1 ? weight-- : 0;
                                 });
                               },
                               child: Text(
@@ -221,7 +223,7 @@ class _InputPageState extends State<InputPage> {
                             FloatingActionButton(
                               onPressed: () {
                                 setState(() {
-                                  age < 100 ? age + 1 : 100;
+                                  age < 100 ? age++ : 100;
                                 });
                               },
                               child: Text(
@@ -236,7 +238,7 @@ class _InputPageState extends State<InputPage> {
                             FloatingActionButton(
                               onPressed: () {
                                 setState(() {
-                                  age >= 1 ? age - 1 : 1;
+                                  age >= 1 ? age-- : 1;
                                 });
                               },
                               child: Text(
