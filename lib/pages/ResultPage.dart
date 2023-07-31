@@ -6,21 +6,20 @@ class ResultsPage extends StatelessWidget {
   final Bmi current_bmi;
 
   const ResultsPage({super.key, required this.current_bmi});
+  int get_bmi_result() {
+    return current_bmi.calculateBMI();
+  }
+
+  String get_bmi_description() {
+    return current_bmi.getDescription();
+  }
+
+  String get_bmi_pointer() {
+    return current_bmi.getResult();
+  }
 
   @override
   Widget build(BuildContext context) {
-    int get_bmi_result() {
-      return current_bmi.calculateBMI();
-    }
-
-    String get_bmi_description() {
-      return current_bmi.getDescription();
-    }
-
-    String get_bmi_pointer() {
-      return current_bmi.getResult();
-    }
-
     int bmiResult = get_bmi_result();
     String? resultText = get_bmi_pointer();
     String? desc = get_bmi_description();
